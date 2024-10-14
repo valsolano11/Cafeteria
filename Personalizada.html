@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="Style.css">
+   <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+   <title>Cafetería</title>
+</head>
+
+<body>
+   <header>
+      <a href="#" class="logo">
+         <img src="/img/images.png" alt="Logo">
+      </a>
+      <ul class="navbar">
+         <li><a href="#home">Inicio</a></li>
+         <li><a href="#Servicios">Servicios</a></li>
+         <li><a href="#Productos">Productos</a></li>
+         <li><a href="#Informacion">Información</a></li>
+      </ul>
+      <div class="header-icon">
+         <li class="bx bx-cart-alt" id="cart-icon">
+            <span id="cart-count">0</span>
+         </li>
+         <li class="bx bx-search" id="search-icon"></li>
+      </div>
+   </header>
+
+   <div class="search-box" style="display: none;">
+      <input type="text" placeholder="Buscar..." />
+      <span id="close-search" class="close-search">&times;</span>
+   </div>
+
+
+   <!-- Carrito Modal -->
+   <div id="cart-modal" class="cart-modal">
+      <span id="cart-close" class="cart-close">&times;</span>
+      <h2>Carrito de compras</h2>
+      <div id="cart-items" class="cart-items"></div>
+      <div id="cart-total"></div>
+      <button class="pay-btn">Ir a pagar</button>
+   </div>
+
+
+   <section class="home" id="home">
+      <div class="home-text">
+         <h1>Start your day <br>with coffee</h1>
+         <p>Discover our premium coffee blends crafted for the best flavor and aroma.</p>
+         <a href="#" class="btn">Shop now</a>
+      </div>
+      <div class="home-img">
+         <img src="/img/38b43fe42ed009093906eb380784fe54.jpg" alt="Coffee Image" class="coffee-image">
+      </div>
+   </section>
+
+
+
+<section class="servicies container" id="Servicios">
+   <div class="valentina">
+      <h2>Descubre Nuestros Servicios</h2> <!-- Título atractivo -->
+   </div>
+   <div class="service-content">
+      <div class="ser-box">
+         <img src="./img/images/ser-1.png" alt="Café Especial">
+         <p>Café Especial</p>
+      </div>
+      <div class="ser-box">
+         <img src="img/images/ser-2.png" alt="Repostería Casera">
+         <p>Repostería Casera</p>
+      </div>
+      <div class="ser-box">
+         <img src="img/images/ser-3.png" alt="Tés Aromáticos">
+         <p>Tés Aromáticos</p>
+      </div>
+      <div class="ser-box">
+         <img src="img/images/ser-4.png" alt="Comidas Rápidas">
+         <p>Comidas Rápidas</p>
+      </div>
+      <div class="ser-box">
+         <img src="img/images/ser-5.png" alt="Espacios Acogedores">
+         <p>Espacios Acogedores</p>
+      </div>
+   </div>
+</section>
+
+
+   <!-- Productos -->
+   <section class="productos" id="Productos">
+      <div class="heading">
+         <h2>Nuestros productos más populares</h2>
+      </div>
+      <div class="products-container">
+         <div class="card">
+            <img src="img/melhores-estabelecimentos-sao-paulo-cafe.jpg" class="card-img-top" alt="Product 1">
+            <div class="card-content">
+               <h5 class="card-title">Cafe </h5>
+               <p class="card-text">Una breve descripción del Producto 1.</p>
+               <div class="content">
+                  <span>$4.000</span>
+                  <a href="#" class="card-button" data-name="Producto 1" data-price="4000">Agregar al carrito</a>
+               </div>
+            </div>
+         </div>
+
+         <div class="card">
+            <img src="img/descarga.jpeg" class="card-img-top" alt="Product 2">
+            <div class="card-content">
+               <h5 class="card-title">Pan de maiz</h5>
+               <p class="card-text">Una breve descripción del Producto 2.</p>
+               <div class="content">
+                  <span>$5.000</span>
+                  <a href="#" class="card-button" data-name="Producto 2" data-price="5000">Agregar al carrito</a>
+               </div>
+            </div>
+         </div>
+
+         <div class="card">
+            <img src="img/shutterstock_1758025376-1-1024x683.jpg" class="card-img-top" alt="Product 3">
+            <div class="card-content">
+               <h5 class="card-title">Pan de queso</h5>
+               <p class="card-text">Una breve descripción del Producto 3.</p>
+               <div class="content">
+                  <span>$3.000</span>
+                  <a href="#" class="card-button" data-name="Producto 3" data-price="3000">Agregar al carrito</a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!-- Clientes -->
+   <section class="customers" id="Informacion">
+      <div class="heading">
+         <h2>Nuestros Clientes</h2>
+      </div>
+      <div class="customers-container">
+         <div class="card">
+            <img src="img/images (1).png" class="card-img-top" alt="Customer Image">
+            <div class="card-body">
+               <div class="stars">
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star-half"></i>
+               </div>
+               <p class="card-text">“Excelente servicio y productos de alta calidad. Estoy muy satisfecho con mi
+                  compra.”</p>
+               <h5 class="card-title">Carlos Martínez</h5>
+            </div>
+         </div>
+
+         <div class="card">
+            <img src="img/images (2).png" class="card-img-top" alt="Customer Image">
+            <div class="card-body">
+               <div class="stars">
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star-half"></i>
+               </div>
+               <p class="card-text">“Me encantó la experiencia. El café es delicioso y el ambiente es muy acogedor.”</p>
+               <h5 class="card-title">Javier Gómez</h5>
+            </div>
+         </div>
+
+         <div class="card">
+            <img src="img/4042365.png" class="card-img-top" alt="Customer Image">
+            <div class="card-body">
+               <div class="stars">
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star-half"></i>
+               </div>
+               <p class="card-text">“El mejor lugar para relajarse y disfrutar de un buen café. Volveré pronto.”</p>
+               <h5 class="card-title">Luis Fernández</h5>
+            </div>
+         </div>
+      </div>
+      </div>
+   </section>
+
+   <!-- Footer -->
+   <footer class="footer">
+      <div class="footer-box">
+         <h3>Cafetería</h3>
+         <p>Bienvenido a nuestra cafetería, donde cada taza es una experiencia única. Ofrecemos café de origen ético y
+            fresco, cultivado por los mejores agricultores.</p>
+         <div class="social">
+            <a href="#"><i class="bx bxl-facebook"></i></a>
+            <a href="#"><i class="bx bxl-instagram"></i></a>
+            <a href="#"><i class="bx bxl-tiktok"></i></a>
+         </div>
+      </div>
+   
+      <div class="footer-box">
+         <h3>Soporte</h3>
+         <ul>
+            <li><a href="#">Productos</a></li>
+            <li><a href="#">Ayuda y Soporte</a></li>
+            <li><a href="#">Política de Devolución</a></li>
+            <li><a href="#">Términos de Uso</a></li>
+         </ul>
+      </div>
+   
+      <div class="footer-box">
+         <h3>Guías</h3>
+         <ul>
+            <li><a href="#">Características</a></li>
+            <li><a href="#">Carreras</a></li>
+            <li><a href="#">Publicaciones del Blog</a></li>
+            <li><a href="#">Nuestras Sucursales</a></li>
+         </ul>
+      </div>
+   
+      <div class="footer-box">
+         <h3>Contacto</h3>
+         <div class="contact">
+            <span><i class="bx bxs-map"></i> Calle Falsa 123</span>
+            <span><i class="bx bxs-phone"></i> +57 123456789</span>
+            <span><i class="bx bxs-envelope"></i> coffee@shop.com</span>
+         </div>
+      </div>
+   </footer>
+
+
+   <script src="Funciones.js"></script>
+</body>
+
+</html>

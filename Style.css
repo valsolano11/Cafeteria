@@ -1,0 +1,603 @@
+@import url('');
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-padding-top: 4rem;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+}
+:root{
+    --main-color: #bc9667;
+    --second-color: #ffffff;
+    --text-color: #1b1b1b;
+    --bg-color: #0f0f0f;
+
+    --box-shadow: 2px 2px 10px 4px rgb(14 55 54 / 15%);
+}
+section{
+    padding: 50px 100px;
+}
+img{
+    width: 100%;
+}
+body{
+ color: var(--text-color);
+}
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 100px;
+    transform-origin: 0.5s linear;
+    background: var(--second-color);
+}
+header.shadow{
+    background: var(--text-color);
+    box-shadow: var(--box-shadow);
+}
+.logo img{
+    width: 60px;
+}
+.navbar{
+    display: flex;
+}
+.navbar a{
+    padding: 8px 17px;
+    color: var(--text-color);
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.navbar a:hover{
+    background:  var(--main-color);
+    border-radius: 0.2rem;
+    transition:  0.2s all;
+}
+
+.header-icon{
+     font-size:  22px;
+     cursor: pointer;
+     z-index: 1000;
+     display: flex;
+     column-gap: 0.8rem;
+}
+.header-icon .bx{
+    color: var(--text-color);
+}
+.header-icon .bx:hover{
+    color: var(--main-color);
+}
+#menu-icon{
+    color: var(--main-color);
+    font-size: 24px;
+    z-index: 10000;
+    cursor: pointer;
+    display:none;
+}
+.search-box {
+    position: fixed;
+    /* Para mantener la barra fija */
+    top: 60px;
+    /* Ajusta según la altura de tu header */
+    right: 20px;
+    /* Ajusta según tus necesidades */
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: none;
+    /* Inicialmente oculta */
+    z-index: 1000;
+    /* Asegúrate de que esté en la parte superior */
+    transition: opacity 0.3s ease;
+}
+.search-box input {
+    border: none;
+    /* Sin borde en el input */
+    outline: none;
+    /* Sin contorno */
+    padding: 8px;
+    /* Espaciado interno en el input */
+    border-radius: 4px;
+    /* Bordes redondeados en el input */
+    width: 200px;
+    /* Ancho del input */
+    font-size: 16px;
+    /* Tamaño de fuente */
+    color: #333;
+    /* Color de texto */
+    margin-right: 5px;
+    /* Espacio entre el input y el botón de cerrar */
+    background-color: #f9f9f9;
+    /* Fondo gris claro para el input */
+    transition: background-color 0.3s ease;
+    /* Efecto de transición para el fondo */
+}
+
+.search-box input::placeholder {
+    color: #aaa;
+    /* Color del placeholder */
+}
+
+.search-box input:hover {
+    background-color: #eaeaea;
+    /* Fondo más oscuro al pasar el mouse */
+}
+
+.close-search {
+    cursor: pointer;
+    /* Cambia el cursor al pasar sobre el botón de cierre */
+    font-size: 20px;
+    /* Tamaño del icono de cerrar */
+    color: #888;
+    /* Color del icono de cerrar */
+    transition: color 0.3s ease;
+    /* Efecto de transición para el color */
+}
+
+.close-search:hover {
+    color: #ff0000;
+    /* Color al pasar el mouse por encima */
+}
+
+.home {
+    width: 100%;
+    min-height: 80vh;
+    background-color: black;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(17rem, auto));
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+.home-text {
+    margin-right: 40px;
+    text-align: center;
+}
+.home-text h1 {
+    font-size: 3.4rem;
+    color: var(--main-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+}
+
+.home-text p {
+    font-size: 0.85rem;
+    color: #e0e0e0;
+    margin: 0.5rem 0 2rem;
+}
+.home {
+    width: 100%;
+    min-height: 80vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+.home-img {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 0;
+}
+
+.home-img img.coffee-image {
+width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--main-color);
+}
+.btn {
+    background-color: white;
+    color: black;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background-color: var(--main-color);
+}
+
+
+.valentina {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.valentina h2 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: rgb(5, 5, 5);
+    /* Asegúrate de que el color sea blanco */
+    margin: 0;
+    /* Eliminar margen si es necesario */
+    padding: 1rem;
+    /* Añadir algo de padding para separación */
+}
+
+.service-content {
+    display: flex;
+    /* Mantiene los elementos en fila */
+    justify-content: space-between;
+    /* Espacio entre elementos */
+    gap: 1.5rem;
+}
+
+.ser-box {
+    background: var(--main-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1rem;
+    padding: 35px 20px;
+    border-radius: 2rem;
+    color: white;
+    /* Cambiar a blanco */
+}
+
+.ser-box img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.ser-box p {
+    color: white;
+    /* Cambiar a blanco */
+}
+.heading{
+    text-align: center;
+}
+.heading h2{
+    font-size: 1.8rem;
+    text-transform: uppercase;
+}
+
+.products-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, auto));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.products-container .card {
+    position: relative;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shadow);
+}
+
+.products-container img {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    object-position: center;
+    padding: 20px;
+    background: #f1f1f1;
+    border-radius: 0.5rem;
+}
+
+.products-container .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.products-container .card-title {
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0.5rem 0 0.5rem;
+}
+
+.products-container .card-text {
+    margin-bottom: 1rem;
+}
+
+.products-container .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 1rem;
+}
+
+.products-container .content span {
+    padding: 0.1rem;
+    color: var(--bg-color);
+    background: var(--main-color);
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.products-container .content a {
+    padding: 0.1rem;
+    color: var(--text-color);
+    border: 2px solid var(--main-color);
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+.products-container .content a:hover {
+    background-color: var(--main-color);
+    color: var(--bg-color);
+    transition: 0.2s all linear;
+}
+.customers-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 columnas por defecto */
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+/* Para pantallas más pequeñas */
+@media (max-width: 900px) {
+    .customers-container {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 columnas cuando el ancho es menor a 900px */
+    }
+}
+
+@media (max-width: 600px) {
+    .customers-container {
+        grid-template-columns: 1fr;
+        /* 1 columna cuando el ancho es menor a 600px */
+    }
+}
+
+
+.customers-container .card {
+    padding: 20px;
+    box-shadow: var(--box-shadow);
+    border-radius: 0.5rem;
+    text-align: center;
+    transition: 0.2s all linear;
+}
+
+.customers-container .card:hover {
+    background: var(--second-color);
+}
+
+.customers-container .stars {
+    margin-bottom: 1rem;
+}
+
+.customers-container .stars i {
+    color: var(--main-color);
+    font-size: 1.2rem;
+    margin: 0 2px;
+}
+
+.customers-container .card-text {
+    font-size: 0.938rem;
+    margin: 1rem 0;
+    color: #555;
+}
+
+.customers-container .card-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0.5rem 0 0.5rem;
+}
+
+.customers-container .card img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.footer {
+    background-color: black;
+    /* Fondo negro */
+    color: white;
+    /* Texto blanco */
+    padding: 2rem 1rem;
+    /* Espaciado interno */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
+    /* Aumenta el espacio entre columnas */
+    text-align: center;
+    /* Centra el texto */
+}
+
+.footer-box h3 {
+    font-size: 1.5rem;
+    /* Aumenta el tamaño del título */
+    margin-bottom: 1rem;
+    /* Espacio inferior */
+}
+
+.footer-box p,
+.footer-box li a {
+    font-size: 1rem;
+    /* Tamaño de fuente consistente */
+    margin-bottom: 0.5rem;
+    /* Espacio entre párrafos */
+}
+
+.footer-box a {
+    color: white;
+    /* Enlaces en blanco */
+    text-decoration: none;
+    /* Sin subrayado en los enlaces */
+}
+
+.footer-box a:hover {
+    color: var(--main-color);
+    /* Color del enlace al pasar el ratón */
+    transition: color 0.3s ease;
+    /* Transición suave al cambiar de color */
+}
+
+.social {
+    justify-content: center;
+    color: var(--second-color);
+}
+
+.social a {
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+.social a:hover {
+    transform: scale(1.1);
+    color: var(--main-color);
+}
+
+.contact {
+    align-items: center;
+    text-align: center;
+}
+.cart-modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--second-color);
+    padding: 20px;
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shadow);
+    z-index: 2000;
+    width: 90%;
+    max-width: 500px;
+    transition: 0.3s ease;
+}
+    
+.cart-modal.active {
+    display: block;
+}
+.cart-close {
+             cursor: pointer;
+             /* Cambiar el cursor al pasar */
+             color: var(--main-color);
+             /* Color del texto */
+             font-size: 24px;
+             /* Tamaño de fuente */
+             float: right;
+             /* Alineación a la derecha */
+         }
+    
+         .cart-items {
+             max-height: 300px;
+             /* Altura máxima para la lista de artículos */
+             overflow-y: auto;
+             /* Desplazamiento vertical si es necesario */
+         }
+    
+         .cart-item {
+             display: flex;
+             /* Uso de flexbox */
+             justify-content: space-between;
+             /* Espaciado entre elementos */
+             align-items: center;
+             /* Alineación vertical */
+             padding: 10px 0;
+             /* Espaciado interno */
+             border-bottom: 1px solid var(--bg-color);
+             /* Línea inferior */
+         }
+    
+         .cart-item:last-child {
+             border-bottom: none;
+             /* Sin borde en el último elemento */
+         }
+    
+         .item-title {
+             font-weight: 500;
+             /* Negrita para el título */
+         }
+    
+         .item-quantity-controls {
+             display: flex;
+             /* Uso de flexbox */
+             align-items: center;
+             /* Alineación vertical */
+         }
+    
+         .item-quantity {
+             margin: 0 10px;
+             /* Espaciado entre los botones y la cantidad */
+         }
+    
+         .remove-btn {
+             color: red;
+             /* Color para eliminar */
+             cursor: pointer;
+             /* Cambiar el cursor al pasar */
+         }
+    
+         .pay-btn {
+             margin-top: 20px;
+             /* Separación del total */
+             padding: 10px 20px;
+             /* Ajustar padding del botón */
+             border: none;
+             /* Sin borde por defecto */
+             border-radius: 0.5rem;
+             /* Bordes redondeados */
+             background: var(--main-color);
+             /* Color de fondo */
+             color: var(--second-color);
+             /* Color del texto */
+             font-size: 1.2rem;
+             /* Tamaño de fuente más grande */
+             cursor: pointer;
+             /* Cambiar el cursor al pasar */
+             transition: background 0.3s;
+             /* Suavizar el cambio de fondo */
+         }
+    
+         .pay-btn:hover {
+             background: #8a6f4d;
+             /* Color de fondo al pasar el mouse */
+         }
+    
+         button {
+             padding: 5px 10px;
+             /* Padding para botones */
+             border: none;
+             /* Sin borde por defecto */
+             background: var(--main-color);
+             /* Color de fondo */
+             color: white;
+             /* Color del texto */
+             cursor: pointer;
+             /* Cambiar el cursor al pasar */
+             transition: background 0.3s;
+             /* Suavizar el cambio de fondo */
+             margin: 0 5px;
+             /* Espaciado entre botones */
+             border-radius: 0.5rem;
+             /* Bordes redondeados */
+         }
+    
+         button:hover {
+             background: #8a6f4d;
+             /* Color de fondo al pasar el mouse */
+         }
